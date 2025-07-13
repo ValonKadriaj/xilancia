@@ -1,0 +1,110 @@
+{
+    "info": {
+        "name": "Laravel Users API",
+        "description": "Test collection for Laravel Users API with password support"
+    },
+    "item": [{
+            "name": "Create User",
+            "request": {
+                "method": "POST",
+                "header": [{
+                    "key": "Content-Type",
+                    "value": "application/json"
+                }],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n  \"first_name\": \"John\",\n  \"last_name\": \"Doe\",\n  \"email\": \"john@example.com\",\n  \"password\": \"secret123\"}"
+                },
+                "url": {
+                    "raw": "http://localhost:8080/api/users",
+                    "protocol": "http",
+                    "host": ["localhost"],
+                    "port": "8080",
+                    "path": ["api", "users"]
+                }
+            }
+        },
+        {
+            "name": "Get All Users",
+            "request": {
+                "method": "GET",
+                "url": {
+                    "raw": "http://localhost:8080/api/users",
+                    "protocol": "http",
+                    "host": ["localhost"],
+                    "port": "8080",
+                    "path": ["api", "users"]
+                }
+            }
+        },
+        {
+            "name": "Get User by ID",
+            "request": {
+                "method": "GET",
+                "url": {
+                    "raw": "http://localhost:8080/api/users/1",
+                    "protocol": "http",
+                    "host": ["localhost"],
+                    "port": "8080",
+                    "path": ["api", "users", "1"]
+                }
+            }
+        },
+        {
+            "name": "Update User",
+            "request": {
+                "method": "PUT",
+                "header": [{
+                    "key": "Content-Type",
+                    "value": "application/json"
+                }],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n  \"first_name\": \"Jane\",\n  \"last_name\": \"Smith\",\n  \"email\": \"jane@example.com\",\n  \"password\": \"newpass123\"\n}"
+                },
+                "url": {
+                    "raw": "http://localhost:8080/api/users/1",
+                    "protocol": "http",
+                    "host": ["localhost"],
+                    "port": "8080",
+                    "path": ["api", "users", "1"]
+                }
+            }
+        },
+        {
+            "name": "Delete User",
+            "request": {
+                "method": "DELETE",
+                "url": {
+                    "raw": "http://localhost:8080/api/users/1",
+                    "protocol": "http",
+                    "host": ["localhost"],
+                    "port": "8080",
+                    "path": ["api", "users", "1"]
+                }
+            }
+        },
+        {
+            "name": "Login",
+            "request": {
+                "method": "POST",
+                "header": [{
+                    "key": "Content-Type",
+                    "value": "application/json"
+                }],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n  \"email\": \"john@example.com\",\n  \"password\": \"secret123\"\n}"
+                },
+                "url": {
+                    "raw": "http://localhost:8080/api/auth/login",
+                    "protocol": "http",
+                    "host": ["localhost"],
+                    "port": "8080",
+                    "path": ["api", "auth", "login"]
+                }
+            }
+        }
+
+    ]
+}
