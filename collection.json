@@ -1,7 +1,9 @@
 {
     "info": {
         "name": "Laravel Users API",
-        "description": "Test collection for Laravel Users API with password support"
+        "description": "Test collection for Laravel Users API with password support",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+        "version": "1.0.0"
     },
     "item": [{
             "name": "Create User",
